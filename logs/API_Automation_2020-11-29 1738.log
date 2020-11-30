@@ -1,0 +1,6 @@
+2020-11-29 17:38:03,186 - [execute_mysql.py -->line:32] - INFO : 数据库连接成功, host --> 42.192.88.224, database --> auto_platform_two
+2020-11-29 17:38:03,186 - [execute_mysql.py -->line:38] - INFO : 正在执行查询数据库, sql --> SELECT `desc` FROM ap_projects WHERE name='微信' AND is_delete=0;
+2020-11-29 17:38:03,257 - [execute_mysql.py -->line:44] - INFO : 数据库查询成功, 查询结果 --> ('微信测试版',)
+2020-11-29 17:38:51,989 - [execute_mysql.py -->line:32] - INFO : 数据库连接成功, host --> 42.192.88.224, database --> auto_platform_two
+2020-11-29 17:38:51,989 - [execute_mysql.py -->line:38] - INFO : 正在执行查询数据库, sql --> SELECT * FROM ap_projects WHERE id < 10;;
+2020-11-29 17:38:52,075 - [execute_mysql.py -->line:44] - INFO : 数据库查询成功, 查询结果 --> (datetime.datetime(2020, 11, 15, 15, 9, 37, 576361), datetime.datetime(2020, 11, 29, 11, 31, 45, 877746), 0, 1, '微信', '小马哥', '小李子', '小风', '微信测试版', '微信测试版')
