@@ -42,6 +42,10 @@ class ReadExcel(object):
         rows_data = list(self.sheet.rows)
         # print(rows_data)
 
+
+
+
+
         # 处理titles
         titles = []
         for title in rows_data[0]:
