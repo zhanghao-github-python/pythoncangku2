@@ -91,7 +91,7 @@ if __name__ == '__main__':
     for i in cases:
          print(i.case_id, i.title)
 
-    wb.write_data(2, 9, '2412412421')
+    wb.write_data(2, 9, '241241喔喔2421')
 
 
 
