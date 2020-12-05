@@ -1,0 +1,1 @@
+2020-12-04 20:37:33,198 - [http_request.py -->line:33] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'aaaaaa', 'password': '111111'}, 参数类型: json

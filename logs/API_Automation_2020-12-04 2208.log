@@ -1,0 +1,6 @@
+2020-12-04 22:08:12,871 - [test_login.py -->line:39] - INFO : ================================== 开始执行登录接口测试 ==================================
+2020-12-04 22:08:12,872 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'aaaaaa', 'password': '111111'}, 参数类型: form-data, 请求头: None
+2020-12-04 22:08:15,137 - [test_login.py -->line:82] - INFO : 预期结果: {'user_id': 3, 'username': 'aaaaaa'}, 实际结果: {'user_id': 3, 'username': 'aaaaaa'}， 断言结果: PASS
+2020-12-04 22:08:15,177 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'aaaaaa', 'password': '111111'}, 参数类型: form-data, 请求头: None
+2020-12-04 22:08:17,403 - [test_login.py -->line:82] - INFO : 预期结果: {'user_id': 3, 'username': 'aaaaaa'}, 实际结果: {'user_id': 3, 'username': 'aaaaaa'}， 断言结果: PASS
+2020-12-04 22:08:17,459 - [test_login.py -->line:44] - INFO : ================================== 开始执行登录接口测试 ==================================

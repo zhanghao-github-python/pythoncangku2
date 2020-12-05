@@ -1,0 +1,2 @@
+2020-12-04 21:01:40,374 - [http_request.py -->line:42] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'aaaaaa', 'password': '111111'}, 参数类型: json, 请求头: None
+2020-12-04 21:01:40,635 - [http_request.py -->line:35] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/projects/names/, 请求参数: None, 请求头: {'Authorization': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzE3MzI5OSwiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.h91o73rpMvYYrNm34NCBxWEILQYk37JbNQSA1tDAWOk'}

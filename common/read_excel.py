@@ -42,10 +42,6 @@ class ReadExcel(object):
         rows_data = list(self.sheet.rows)
         # print(rows_data)
 
-
-
-
-
         # 处理titles
         titles = []
         for title in rows_data[0]:
@@ -89,9 +85,6 @@ if __name__ == '__main__':
     wb = ReadExcel(file_path, 'login')
     cases = wb.read_line_data()
     for i in cases:
-         print(i.case_id, i.title)
+         print(i.case_id, i.request_data, type(i.request_data))
 
-    wb.write_data(2, 9, '241241喔喔2421')
-
-
-
+    # wb.write_data(2, 9, '241241喔喔2421')
