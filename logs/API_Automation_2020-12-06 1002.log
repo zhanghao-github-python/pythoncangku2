@@ -1,0 +1,16 @@
+2020-12-06 10:02:37,286 - [test_login.py -->line:43] - INFO : ================================== 开始执行登录接口测试 ==================================
+2020-12-06 10:02:37,288 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'aaaaaa', 'password': '111111'}, 参数类型: form-data, 请求头: None
+2020-12-06 10:02:39,556 - [test_login.py -->line:86] - INFO : 预期结果: {'user_id': 3, 'username': 'aaaaaa'}, 实际结果: {'user_id': 3, 'username': 'aaaaaa'}， 断言结果: PASS
+2020-12-06 10:02:39,604 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'zhzhzh', 'password': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-06 10:02:41,832 - [test_login.py -->line:86] - INFO : 预期结果: {'user_id': 83, 'username': 'zhzhzh'}, 实际结果: {'user_id': 83, 'username': 'zhzhzh'}， 断言结果: PASS
+2020-12-06 10:02:41,878 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'zhzhzh1', 'password': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-06 10:02:44,119 - [test_login.py -->line:86] - INFO : 预期结果: {'user_id': 84, 'username': 'zhzhzh1'}, 实际结果: {'user_id': 84, 'username': 'zhzhzh1'}， 断言结果: PASS
+2020-12-06 10:02:44,165 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'zhzhzh1', 'password': '123457'}, 参数类型: form-data, 请求头: None
+2020-12-06 10:02:46,389 - [test_login.py -->line:86] - INFO : 预期结果: {'non_field_errors': ['无法使用提供的认证信息登录。']}, 实际结果: {'non_field_errors': ['无法使用提供的认证信息登录。']}， 断言结果: PASS
+2020-12-06 10:02:46,440 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': '', 'password': '123458'}, 参数类型: form-data, 请求头: None
+2020-12-06 10:02:48,480 - [test_login.py -->line:86] - INFO : 预期结果: {'username': ['该字段不能为空。']}, 实际结果: {'username': ['该字段不能为空。']}， 断言结果: PASS
+2020-12-06 10:02:48,526 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'zhzhzh1', 'password': ''}, 参数类型: form-data, 请求头: None
+2020-12-06 10:02:50,566 - [test_login.py -->line:86] - INFO : 预期结果: {'password': ['该字段不能为空。']}, 实际结果: {'password': ['该字段不能为空。']}， 断言结果: PASS
+2020-12-06 10:02:50,611 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'zhz23h1', 'password': '12346'}, 参数类型: form-data, 请求头: None
+2020-12-06 10:02:52,837 - [test_login.py -->line:86] - INFO : 预期结果: {'non_field_errors': ['无法使用提供的认证信息登录。']}, 实际结果: {'non_field_errors': ['无法使用提供的认证信息登录。']}， 断言结果: PASS
+2020-12-06 10:02:52,883 - [test_login.py -->line:48] - INFO : ================================== 开始执行登录接口测试 ==================================

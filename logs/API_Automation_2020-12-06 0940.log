@@ -1,0 +1,31 @@
+2020-12-06 09:40:23,575 - [test_login.py -->line:43] - INFO : ================================== 开始执行登录接口测试 ==================================
+2020-12-06 09:40:23,576 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'aaaaaa', 'password': '111111'}, 参数类型: form-data, 请求头: None
+2020-12-06 09:40:25,844 - [test_login.py -->line:86] - INFO : 预期结果: {'user_id': 3, 'username': 'aaaaaa'}, 实际结果: {'user_id': 3, 'username': 'aaaaaa'}， 断言结果: PASS
+2020-12-06 09:40:25,890 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'zhzhzh', 'password': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-06 09:40:28,125 - [test_login.py -->line:81] - ERROR :  :: {'user_id': 83, 'username': 'aaaaaa'} != {'user_id': 83, 'username': 'zhzhzh'}
+Traceback (most recent call last):
+  File "D:\PyCharm Community Edition 2020.2.2\plugins\python-ce\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Py39\lib\unittest\case.py", line 831, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Py39\lib\unittest\case.py", line 1130, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Py39\lib\unittest\case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: {'user_id': 83, 'username': 'aaaaaa'} != {'user_id': 83, 'username': 'zhzhzh'}
+- {'user_id': 83, 'username': 'aaaaaa'}
+?                              ^^^^^^
+
++ {'user_id': 83, 'username': 'zhzhzh'}
+?                              ^^^^^^
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\api_automation-lianxi\test_cases\test_login.py", line 78, in test_login
+    self.assertEqual(eval(case.expected_data), res)
+  File "D:\PyCharm Community Edition 2020.2.2\plugins\python-ce\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: {'user_id': 83, 'username': 'aaaaaa'} != {'user_id': 83, 'username': 'zhzhzh'}
+2020-12-06 09:40:28,171 - [test_login.py -->line:48] - INFO : ================================== 开始执行登录接口测试 ==================================

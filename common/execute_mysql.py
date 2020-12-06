@@ -71,9 +71,15 @@ if __name__ == '__main__':
 
     db = ExecuteMysql()
     # sql = "SELECT COUNT(id) FROM ap_projects WHERE is_delete=0;"
-    sql = "SELECT * FROM ap_projects WHERE id < 10;;"
-    res = db.find_count(sql=sql)
-    print(res)
+    # sql = "SELECT * FROM ap_projects WHERE id < 10;;"
+    # res = db.find_count(sql=sql)
+    # print(res)
     # id, role_id, create_time = db.find_one(sql=sql)
     # print(id, role_id, create_time)
     # print(type(id, role_id, create_time))
+
+    username = 'aaaaaa'
+
+    sql = "SELECT id FROM auth_user WHERE username='{}';".format(username)
+    res = db.find_one(sql=sql)[0]
+    print(res)

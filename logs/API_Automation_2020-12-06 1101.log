@@ -1,0 +1,15 @@
+2020-12-06 11:01:53,679 - [test_register.py -->line:45] - INFO : ================================== 开始执行注册接口测试 ==================================
+2020-12-06 11:01:53,826 - [execute_mysql.py -->line:32] - INFO : 数据库连接成功, host --> 42.192.88.224, database --> auto_platform_two
+2020-12-06 11:01:53,827 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/register/, 请求参数: {'username': '73K0k0', 'email': '55818344@qq.com', 'password': '123456', 'password_confirm': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-06 11:01:56,099 - [execute_mysql.py -->line:38] - INFO : 正在执行查询数据库, sql --> SELECT id FROM auth_user WHERE username='73K0k0';
+2020-12-06 11:01:56,172 - [execute_mysql.py -->line:44] - INFO : 数据库查询成功, 查询结果 --> (89,)
+2020-12-06 11:01:56,173 - [test_register.py -->line:106] - INFO : 预期结果: {'id': 89, 'username': '73K0k0'}, 实际结果: {'id': 89, 'username': '73K0k0'}， 断言结果: PASS
+2020-12-06 11:01:56,229 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/register/, 请求参数: {'username': '5TVfGe', 'email': '82170944@qq.com', 'password': '123456', 'password_confirm': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-06 11:01:58,457 - [execute_mysql.py -->line:38] - INFO : 正在执行查询数据库, sql --> SELECT id FROM auth_user WHERE username='5TVfGe';
+2020-12-06 11:01:58,531 - [execute_mysql.py -->line:44] - INFO : 数据库查询成功, 查询结果 --> (90,)
+2020-12-06 11:01:58,531 - [test_register.py -->line:106] - INFO : 预期结果: {'id': 90, 'username': '5TVfGe'}, 实际结果: {'id': 90, 'username': '5TVfGe'}， 断言结果: PASS
+2020-12-06 11:01:58,585 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/register/, 请求参数: {'username': 'beJU6f', 'email': '58165977@qq.com', 'password': '123456', 'password_confirm': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-06 11:02:00,823 - [execute_mysql.py -->line:38] - INFO : 正在执行查询数据库, sql --> SELECT id FROM auth_user WHERE username='beJU6f';
+2020-12-06 11:02:00,902 - [execute_mysql.py -->line:44] - INFO : 数据库查询成功, 查询结果 --> (91,)
+2020-12-06 11:02:00,902 - [test_register.py -->line:106] - INFO : 预期结果: {'id': 91, 'username': 'beJU6f'}, 实际结果: {'id': 91, 'username': 'beJU6f'}， 断言结果: PASS
+2020-12-06 11:02:00,957 - [test_register.py -->line:51] - INFO : ================================== 开始执行注册接口测试 ==================================

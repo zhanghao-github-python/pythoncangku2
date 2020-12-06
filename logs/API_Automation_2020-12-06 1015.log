@@ -1,0 +1,50 @@
+2020-12-06 10:15:02,752 - [test_register.py -->line:43] - INFO : ================================== 开始执行注册接口测试 ==================================
+2020-12-06 10:15:02,753 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/register/, 请求参数: {'username': 'zhzh21zh', 'email': '769375439@qq.com', 'password': '123456', 'password_confirm': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-06 10:15:04,840 - [test_register.py -->line:81] - ERROR :  :: {'id': 85, 'username': 'zhzh21zh'} != {'email': ['此邮箱已被注册'], 'username': ['已存在一位使用该名字的用户。']}
+Traceback (most recent call last):
+  File "D:\PyCharm Community Edition 2020.2.2\plugins\python-ce\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Py39\lib\unittest\case.py", line 831, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Py39\lib\unittest\case.py", line 1130, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Py39\lib\unittest\case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: {'id': 85, 'username': 'zhzh21zh'} != {'username': ['已存在一位使用该名字的用户。'], 'email': ['此邮箱已被注册']}
+- {'id': 85, 'username': 'zhzh21zh'}
++ {'email': ['此邮箱已被注册'], 'username': ['已存在一位使用该名字的用户。']}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\api_automation-lianxi\test_cases\test_register.py", line 78, in test_login
+    self.assertEqual(eval(case.expected_data), res)
+  File "D:\PyCharm Community Edition 2020.2.2\plugins\python-ce\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: {'id': 85, 'username': 'zhzh21zh'} != {'email': ['此邮箱已被注册'], 'username': ['已存在一位使用该名字的用户。']}
+2020-12-06 10:15:04,892 - [test_register.py -->line:48] - INFO : ================================== 开始执行注册接口测试 ==================================
+2020-12-06 10:15:44,195 - [test_register.py -->line:43] - INFO : ================================== 开始执行注册接口测试 ==================================
+2020-12-06 10:15:44,196 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/register/, 请求参数: {'username': '1zhzh21zh', 'email': '769375439@qq.com', 'password': '123456', 'password_confirm': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-06 10:15:46,287 - [test_register.py -->line:81] - ERROR :  :: {'id': 8, 'username': '1zhzh21zh'} != {'email': ['此邮箱已被注册']}
+Traceback (most recent call last):
+  File "D:\PyCharm Community Edition 2020.2.2\plugins\python-ce\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Py39\lib\unittest\case.py", line 831, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Py39\lib\unittest\case.py", line 1130, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Py39\lib\unittest\case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: {'id': 8, 'username': '1zhzh21zh'} != {'email': ['此邮箱已被注册']}
+- {'id': 8, 'username': '1zhzh21zh'}
++ {'email': ['此邮箱已被注册']}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\api_automation-lianxi\test_cases\test_register.py", line 78, in test_login
+    self.assertEqual(eval(case.expected_data), res)
+  File "D:\PyCharm Community Edition 2020.2.2\plugins\python-ce\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: {'id': 8, 'username': '1zhzh21zh'} != {'email': ['此邮箱已被注册']}
+2020-12-06 10:15:46,303 - [test_register.py -->line:48] - INFO : ================================== 开始执行注册接口测试 ==================================

@@ -1,0 +1,40 @@
+2020-12-06 17:12:52,224 - [test_register.py -->line:45] - INFO : ================================== 开始执行注册接口测试 ==================================
+2020-12-06 17:12:52,838 - [execute_mysql.py -->line:32] - INFO : 数据库连接成功, host --> 42.192.88.224, database --> auto_platform_two
+2020-12-06 17:12:52,840 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/register/, 请求参数: {'username': 'wAtZz4', 'email': '35068423@qq.com', 'password': '123456', 'password_confirm': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-06 17:12:55,210 - [execute_mysql.py -->line:38] - INFO : 正在执行查询数据库, sql --> SELECT id FROM auth_user WHERE username='wAtZz4';
+2020-12-06 17:12:57,079 - [execute_mysql.py -->line:44] - INFO : 数据库查询成功, 查询结果 --> (98,)
+2020-12-06 17:12:57,079 - [test_register.py -->line:110] - INFO : 预期结果: {'id': 98, 'username': 'wAtZz4'}, 实际结果: {'id': 98, 'username': 'wAtZz4'}， 断言结果: PASS
+2020-12-06 17:12:57,132 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/register/, 请求参数: {'username': '9LPD85', 'email': '02432761@qq.com', 'password': '123456', 'password_confirm': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-06 17:12:59,697 - [execute_mysql.py -->line:38] - INFO : 正在执行查询数据库, sql --> SELECT id FROM auth_user WHERE username='9LPD85';
+2020-12-06 17:13:00,481 - [execute_mysql.py -->line:44] - INFO : 数据库查询成功, 查询结果 --> (99,)
+2020-12-06 17:13:00,481 - [test_register.py -->line:110] - INFO : 预期结果: {'id': 99, 'username': '9LPD85'}, 实际结果: {'id': 99, 'username': '9LPD85'}， 断言结果: PASS
+2020-12-06 17:13:00,533 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/register/, 请求参数: {'username': '3t4X42', 'email': '96434896@qq.com', 'password': '123456', 'password_confirm': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-06 17:13:02,807 - [execute_mysql.py -->line:38] - INFO : 正在执行查询数据库, sql --> SELECT id FROM auth_user WHERE username='3t4X42';
+2020-12-06 17:13:04,127 - [execute_mysql.py -->line:44] - INFO : 数据库查询成功, 查询结果 --> (100,)
+2020-12-06 17:13:04,127 - [test_register.py -->line:110] - INFO : 预期结果: {'id': 100, 'username': '3t4X42'}, 实际结果: {'id': 100, 'username': '3t4X42'}， 断言结果: PASS
+2020-12-06 17:13:04,179 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/register/, 请求参数: {'username': 'aaaaaa', 'email': '769314478@qq.com', 'password': '123456', 'password_confirm': '123457'}, 参数类型: form-data, 请求头: None
+2020-12-06 17:13:07,437 - [execute_mysql.py -->line:38] - INFO : 正在执行查询数据库, sql --> SELECT id FROM auth_user WHERE username='aaaaaa';
+2020-12-06 17:13:07,592 - [execute_mysql.py -->line:44] - INFO : 数据库查询成功, 查询结果 --> (3,)
+2020-12-06 17:13:07,592 - [test_register.py -->line:105] - ERROR :  :: {'id': 3, 'username': 'aaaaaa'} != {'username': ['已存在一位使用该名字的用户。']}
+Traceback (most recent call last):
+  File "D:\PyCharm Community Edition 2020.2.2\plugins\python-ce\helpers\pycharm\teamcity\diff_tools.py", line 32, in _patched_equals
+    old(self, first, second, msg)
+  File "C:\Py39\lib\unittest\case.py", line 831, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Py39\lib\unittest\case.py", line 1130, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Py39\lib\unittest\case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: {'id': 3, 'username': 'aaaaaa'} != {'username': ['已存在一位使用该名字的用户。']}
+- {'id': 3, 'username': 'aaaaaa'}
++ {'username': ['已存在一位使用该名字的用户。']}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\api_automation-lianxi\test_cases\test_register.py", line 102, in test_register
+    self.assertEqual(expected_data, res)
+  File "D:\PyCharm Community Edition 2020.2.2\plugins\python-ce\helpers\pycharm\teamcity\diff_tools.py", line 38, in _patched_equals
+    raise error
+teamcity.diff_tools.EqualsAssertionError:  :: {'id': 3, 'username': 'aaaaaa'} != {'username': ['已存在一位使用该名字的用户。']}
+2020-12-06 17:13:07,651 - [test_register.py -->line:51] - INFO : ================================== 开始执行注册接口测试 ==================================
