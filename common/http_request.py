@@ -83,4 +83,3 @@ if __name__ == '__main__':
     # headers = {'Authorization': token}
     # response = http.request(url=url, method='Get', headers=headers)
     # print(response.json())
-

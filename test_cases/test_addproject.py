@@ -3,7 +3,7 @@
 ================================================================================
 
 Author : Administrator
-Created  on : 2020/12/6
+Created  on : 2020/12/10
 
 E-mail: zh13997821732@163.com
 
@@ -23,34 +23,34 @@ from common.config import conf
 from common.read_excel import ReadExcel
 from common.logger import output_log
 from common.http_request import HTTPRequest
-from common.execute_mysql import ExecuteMysql
 from library.ddt import ddt, data
 from main import run
-from common.tools import get_random_email, get_random_name
+from common.tools import get_token
+
 
 # 从配置文件中获取用例excel名称
 file_name = conf.get('excel', 'file_name')
 
 
 @ddt
-class LoginTestCase(unittest.TestCase):
+class ProjectTestCase(unittest.TestCase):
+
     # 拼接完整的excel路径 读取数据
-    wb = ReadExcel(os.path.join(DATA_DIR, file_name), 'register')
+    wb = ReadExcel(os.path.join(DATA_DIR, file_name), 'addproject')
     cases = wb.read_line_data()
 
     @classmethod
     def setUpClass(cls) -> None:
-        output_log.info('================================== 开始执行注册接口测试 ==================================')
+        output_log.info('================================== 开始执行增加项目接口测试 ==================================')
         cls.http = HTTPRequest()
-        cls.db = ExecuteMysql()
 
     @classmethod
     def tearDownClass(cls) -> None:
-        output_log.info('================================== 开始执行注册接口测试 ==================================')
+        output_log.info('================================== 开始执行增加项目接口测试 ==================================')
         cls.http.close()
 
     @data(*cases)
-    def test_register(self, case):
+    def test_add_project(self, case):
 
         # 拼接url
         url = conf.get('env', 'url') + case.url
@@ -58,21 +58,11 @@ class LoginTestCase(unittest.TestCase):
         # 定义向excel回写数据时的row
         self.row = case.case_id + 1
 
-        # 先取出请求数据
-        request_data = eval(case.request_data)
-        if request_data.get('username') == '$username':
-            username = get_random_name()
-            request_data['username'] = username
-        else:
-            username = request_data['username']
-        if request_data.get('email') == '$email':
-            email = get_random_email()
-            request_data['email'] = email
-        else:
-            pass
+        token = get_token(eval(case.token_data))
+        headers = {'Authorization': token}
 
         # 发起请求
-        response = self.http.request(url=url, method=case.method, data=request_data)
+        response = self.http.request(url=url, method=case.method, data=eval(case.request_data), headers=headers)
         time.sleep(2)
 
         # 以下打印内容会显示在html测试报告中
@@ -84,24 +74,12 @@ class LoginTestCase(unittest.TestCase):
 
         res = response.json()
 
-        # 注册成功时 将服务器返回的数据中的token去掉 再来断言
+        # 登录成功时 将服务器返回的数据中的token去掉 再来断言
         if res.get('token'):
             res.pop('token')
-        else:
-            res = response.json()
-
-        if res.get('id'):
-            # 获取注册之后的账户的id
-            sql = "SELECT id FROM auth_user WHERE username='{}';".format(username)
-            uid = self.db.find_one(sql=sql)[0]
-
-            # 组装期望结果
-            expected_data = {'id': uid, 'username': username}
-        else:
-            expected_data = eval(case.expected_data)
 
         try:
-            self.assertEqual(expected_data, res)
+            self.assertEqual(eval(case.expected_data), res)
         except AssertionError as e:
             result = 'FAIL'
             output_log.exception(e)
@@ -109,11 +87,11 @@ class LoginTestCase(unittest.TestCase):
             raise e
         else:
             result = 'PASS'
-            output_log.info('预期结果: {}, 实际结果: {}， 断言结果: {}'.format(expected_data, res, result))
+            output_log.info('预期结果: {}, 实际结果: {}， 断言结果: {}'.format(case.expected_data, res, result))
         finally:
             # 向excel回写数据
-            self.wb.write_data(row=self.row, column=9, value=str(response.json()))
-            self.wb.write_data(row=self.row, column=10, value=result)
+            self.wb.write_data(row=self.row, column=10, value=str(response.json()))
+            self.wb.write_data(row=self.row, column=11, value=result)
 
 
 if __name__ == '__main__':
@@ -122,4 +100,4 @@ if __name__ == '__main__':
         run(CASE_DIR)
     elif env == 'one':
         # 命令行执行该测试脚本所有用例 python test_login.py
-        run('test_register')
+        run('test_login')

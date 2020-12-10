@@ -1,0 +1,24 @@
+2020-12-09 22:08:08,566 - [test_register.py -->line:43] - INFO : ================================== 开始执行注册接口测试 ==================================
+2020-12-09 22:08:08,714 - [execute_mysql.py -->line:32] - INFO : 数据库连接成功, host --> 42.192.88.224, database --> auto_platform_two
+2020-12-09 22:08:08,714 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/register/, 请求参数: {'username': '46w6lf', 'email': '23171765@qq.com', 'password': '123456', 'password_confirm': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-09 22:08:10,995 - [execute_mysql.py -->line:38] - INFO : 正在执行查询数据库, sql --> SELECT id FROM auth_user WHERE username='46w6lf';
+2020-12-09 22:08:11,067 - [execute_mysql.py -->line:44] - INFO : 数据库查询成功, 查询结果 --> (213,)
+2020-12-09 22:08:11,067 - [test_register.py -->line:112] - INFO : 预期结果: {'id': 213, 'username': '46w6lf'}, 实际结果: {'id': 213, 'username': '46w6lf'}， 断言结果: PASS
+2020-12-09 22:08:11,123 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/register/, 请求参数: {'username': 'XOfV2A', 'email': '64504259@qq.com', 'password': '123456', 'password_confirm': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-09 22:08:13,358 - [execute_mysql.py -->line:38] - INFO : 正在执行查询数据库, sql --> SELECT id FROM auth_user WHERE username='XOfV2A';
+2020-12-09 22:08:13,431 - [execute_mysql.py -->line:44] - INFO : 数据库查询成功, 查询结果 --> (214,)
+2020-12-09 22:08:13,431 - [test_register.py -->line:112] - INFO : 预期结果: {'id': 214, 'username': 'XOfV2A'}, 实际结果: {'id': 214, 'username': 'XOfV2A'}， 断言结果: PASS
+2020-12-09 22:08:13,486 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/register/, 请求参数: {'username': 'a2M9T0', 'email': '39123837@qq.com', 'password': '123456', 'password_confirm': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-09 22:08:15,715 - [execute_mysql.py -->line:38] - INFO : 正在执行查询数据库, sql --> SELECT id FROM auth_user WHERE username='a2M9T0';
+2020-12-09 22:08:15,788 - [execute_mysql.py -->line:44] - INFO : 数据库查询成功, 查询结果 --> (215,)
+2020-12-09 22:08:15,789 - [test_register.py -->line:112] - INFO : 预期结果: {'id': 215, 'username': 'a2M9T0'}, 实际结果: {'id': 215, 'username': 'a2M9T0'}， 断言结果: PASS
+2020-12-09 22:08:15,846 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/register/, 请求参数: {'username': 'aaaaaa', 'email': '7693144478@qq.com', 'password': '123456', 'password_confirm': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-09 22:08:17,911 - [test_register.py -->line:112] - INFO : 预期结果: {'username': ['已存在一位使用该名字的用户。']}, 实际结果: {'username': ['已存在一位使用该名字的用户。']}， 断言结果: PASS
+2020-12-09 22:08:17,971 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/register/, 请求参数: {'username': '21r564', 'email': '769314478@qq.com', 'password': '123456', 'password_confirm': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-09 22:08:20,035 - [test_register.py -->line:112] - INFO : 预期结果: {'email': ['此邮箱已被注册']}, 实际结果: {'email': ['此邮箱已被注册']}， 断言结果: PASS
+2020-12-09 22:08:20,089 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/register/, 请求参数: {'username': '1r564', 'email': '76932314478@qq.com', 'password': '123456', 'password_confirm': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-09 22:08:22,140 - [test_register.py -->line:112] - INFO : 预期结果: {'username': ['仅允许输入6-18个字符']}, 实际结果: {'username': ['仅允许输入6-18个字符']}， 断言结果: PASS
+2020-12-09 22:08:22,195 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/register/, 请求参数: {'username': '1r11111111111111564', 'email': '76932314478@qq.com', 'password': '123456', 'password_confirm': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-09 22:08:24,247 - [test_register.py -->line:112] - INFO : 预期结果: {'username': ['仅允许输入6-18个字符']}, 实际结果: {'username': ['仅允许输入6-18个字符']}， 断言结果: PASS
+2020-12-09 22:08:24,302 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/register/, 请求参数: {'username': '1r11111111111111564', 'email': '76932314478qq.com', 'password': '123456', 'password_confirm': '123457'}, 参数类型: form-data, 请求头: None
+2020-12-09 22:08:26,355 - [test_register.py -->line:49] - INFO : ================================== 开始执行注册接口测试 ==================================

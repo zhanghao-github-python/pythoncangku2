@@ -1,0 +1,22 @@
+2020-12-09 20:01:17,065 - [test_register.py -->line:45] - INFO : ================================== 开始执行注册接口测试 ==================================
+2020-12-09 20:01:17,211 - [execute_mysql.py -->line:32] - INFO : 数据库连接成功, host --> 42.192.88.224, database --> auto_platform_two
+2020-12-09 20:01:17,211 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/register/, 请求参数: {'username': 'dLr38L', 'email': '72299167@qq.com', 'password': '123456', 'password_confirm': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-09 20:01:19,486 - [execute_mysql.py -->line:38] - INFO : 正在执行查询数据库, sql --> SELECT id FROM auth_user WHERE username='dLr38L';
+2020-12-09 20:01:19,558 - [execute_mysql.py -->line:44] - INFO : 数据库查询成功, 查询结果 --> (171,)
+2020-12-09 20:01:19,558 - [test_register.py -->line:113] - INFO : 预期结果: {'id': 171, 'username': 'dLr38L'}, 实际结果: {'id': 171, 'username': 'dLr38L'}， 断言结果: PASS
+2020-12-09 20:01:19,612 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/register/, 请求参数: {'username': 'wD80jb', 'email': '63862494@qq.com', 'password': '123456', 'password_confirm': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-09 20:01:21,852 - [execute_mysql.py -->line:38] - INFO : 正在执行查询数据库, sql --> SELECT id FROM auth_user WHERE username='wD80jb';
+2020-12-09 20:01:21,924 - [execute_mysql.py -->line:44] - INFO : 数据库查询成功, 查询结果 --> (172,)
+2020-12-09 20:01:21,924 - [test_register.py -->line:113] - INFO : 预期结果: {'id': 172, 'username': 'wD80jb'}, 实际结果: {'id': 172, 'username': 'wD80jb'}， 断言结果: PASS
+2020-12-09 20:01:21,976 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/register/, 请求参数: {'username': 'n8os30', 'email': '58169788@qq.com', 'password': '123456', 'password_confirm': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-09 20:01:24,217 - [execute_mysql.py -->line:38] - INFO : 正在执行查询数据库, sql --> SELECT id FROM auth_user WHERE username='n8os30';
+2020-12-09 20:01:24,290 - [execute_mysql.py -->line:44] - INFO : 数据库查询成功, 查询结果 --> (173,)
+2020-12-09 20:01:24,291 - [test_register.py -->line:113] - INFO : 预期结果: {'id': 173, 'username': 'n8os30'}, 实际结果: {'id': 173, 'username': 'n8os30'}， 断言结果: PASS
+2020-12-09 20:01:24,343 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/register/, 请求参数: {'username': 'aaaaaa', 'email': '7693144478@qq.com', 'password': '123456', 'password_confirm': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-09 20:01:26,393 - [execute_mysql.py -->line:38] - INFO : 正在执行查询数据库, sql --> SELECT id FROM auth_user WHERE username='aaaaaa';
+2020-12-09 20:01:26,465 - [execute_mysql.py -->line:44] - INFO : 数据库查询成功, 查询结果 --> (3,)
+2020-12-09 20:01:26,465 - [test_register.py -->line:113] - INFO : 预期结果: {'username': ['已存在一位使用该名字的用户。']}, 实际结果: {'username': ['已存在一位使用该名字的用户。']}， 断言结果: PASS
+2020-12-09 20:01:26,522 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/register/, 请求参数: {'username': '21r564', 'email': '769314478@qq.com', 'password': '123456', 'password_confirm': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-09 20:01:28,573 - [execute_mysql.py -->line:38] - INFO : 正在执行查询数据库, sql --> SELECT id FROM auth_user WHERE username='21r564';
+2020-12-09 20:01:28,645 - [execute_mysql.py -->line:44] - INFO : 数据库查询成功, 查询结果 --> None
+2020-12-09 20:01:28,646 - [test_register.py -->line:51] - INFO : ================================== 开始执行注册接口测试 ==================================
