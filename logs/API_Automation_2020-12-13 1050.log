@@ -1,0 +1,41 @@
+2020-12-13 10:50:01,905 - [test_add_project.py -->line:42] - INFO : ================================== 开始执行增加项目接口测试 ==================================
+2020-12-13 10:50:01,906 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'aaaaaa', 'password': '111111'}, 参数类型: form-data, 请求头: None
+2020-12-13 10:50:03,181 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/projects/, 请求参数: {'name': 'oVK7sH', 'leader': '412414', 'tester': '1414124', 'programmer': '124124', 'publish_app': '4214', 'desc': '312321321'}, 参数类型: form-data, 请求头: {'Authorization': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzkxNDIwMSwiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.ow0Tk1HWD11gcM3iITQkVvqzh4WbPVgSROCuyw6Pve8'}
+2020-12-13 10:50:05,277 - [test_add_project.py -->line:96] - ERROR : {'name': 'oVK7sH', 'leader': '412414', 'tes[79 chars]321'} != {'id': 178, 'name': 'oVK7sH', 'leader': '41[90 chars]321'}
+  {'desc': '312321321',
++  'id': 178,
+   'leader': '412414',
+   'name': 'oVK7sH',
+   'programmer': '124124',
+   'publish_app': '4214',
+   'tester': '1414124'}
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\api_automation-lianxi\test_cases\test_add_project.py", line 93, in test_add_project
+    self.assertEqual(expected_data, response_data)
+  File "C:\Py39\lib\unittest\case.py", line 831, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Py39\lib\unittest\case.py", line 1130, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Py39\lib\unittest\case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: {'name': 'oVK7sH', 'leader': '412414', 'tes[79 chars]321'} != {'id': 178, 'name': 'oVK7sH', 'leader': '41[90 chars]321'}
+  {'desc': '312321321',
++  'id': 178,
+   'leader': '412414',
+   'name': 'oVK7sH',
+   'programmer': '124124',
+   'publish_app': '4214',
+   'tester': '1414124'}
+2020-12-13 10:50:05,352 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'aaaaaa', 'password': '111111'}, 参数类型: form-data, 请求头: None
+2020-12-13 10:50:06,613 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/projects/, 请求参数: {'name': '', 'leader': '412414', 'tester': '1414124', 'programmer': '124124', 'publish_app': '4214', 'desc': '312321322'}, 参数类型: form-data, 请求头: {'Authorization': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzkxNDIwNCwiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.oxOfo3AL92fzsoRDwj-W5Z9o1vkIRPEh9H64xFfdqBo'}
+2020-12-13 10:50:08,735 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'aaaaaa', 'password': '111111'}, 参数类型: form-data, 请求头: None
+2020-12-13 10:50:10,009 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/projects/, 请求参数: {'name': '1aa', 'leader': '412414', 'tester': '1414124', 'programmer': '124124', 'publish_app': '4214', 'desc': '312321323'}, 参数类型: form-data, 请求头: {'Authorization': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzkxNDIwOCwiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.DT88UQjUv0VSSc6eQX1VpBr1XM_jjMnrI3mvSHz25mU'}
+2020-12-13 10:50:12,134 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'aaaaaa', 'password': '111111'}, 参数类型: form-data, 请求头: None
+2020-12-13 10:50:13,397 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/projects/, 请求参数: {'name': '2m7PcL', 'leader': '', 'tester': '1414124', 'programmer': '124124', 'publish_app': '4214', 'desc': '312321324'}, 参数类型: form-data, 请求头: {'Authorization': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzkxNDIxMSwiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.gVMB4owZwWePVruzXobWkXKsIKMASwS5hEN1r2kymH0'}
+2020-12-13 10:50:15,517 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'aaaaaa', 'password': '111111'}, 参数类型: form-data, 请求头: None
+2020-12-13 10:50:16,779 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/projects/, 请求参数: {'name': '80y400', 'leader': '1234', 'tester': '', 'programmer': '124124', 'publish_app': '4214', 'desc': '312321325'}, 参数类型: form-data, 请求头: {'Authorization': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzkxNDIxNCwiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.vw7PpPIl1MIBUjbukJhfEJXSLNKLr-HuoJWj9e71CdI'}
+2020-12-13 10:50:18,898 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'aaaaaa', 'password': '111111'}, 参数类型: form-data, 请求头: None
+2020-12-13 10:50:20,161 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/projects/, 请求参数: {'name': '2fpZ4h', 'leader': '1124', 'tester': '3123', 'programmer': '', 'publish_app': '4214', 'desc': '312321326'}, 参数类型: form-data, 请求头: {'Authorization': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzkxNDIxOCwiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.Kk8jac1hW1TpsQsWmX9wjsBE2ru-YOUy0txKkqngbLQ'}
+2020-12-13 10:50:22,279 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'aaaaaa', 'password': '111111'}, 参数类型: form-data, 请求头: None
+2020-12-13 10:50:23,550 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/projects/, 请求参数: {'name': 'jTB1LV', 'leader': '412414', 'tester': '1414124', 'programmer': '124124', 'publish_app': '', 'desc': '312321321'}, 参数类型: form-data, 请求头: {'Authorization': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzkxNDIyMSwiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.qPkbNQI1ge_dfsB3E52YPiJbH0U2e9b0KurfIHBxiZ0'}
+2020-12-13 10:50:25,670 - [test_add_project.py -->line:47] - INFO : ================================== 开始执行增加项目接口测试 ==================================

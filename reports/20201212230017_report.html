@@ -115,20 +115,20 @@ function html_escape(s) {
 </script>
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">api_automation_course</h1>
-<p class='attribute'><strong>测试人员 : </strong> keen</p>
-<p class='attribute'><strong>开始时间 : </strong> 2020-12-10 18:41:53</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:00:20.245843</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 8，通过 8，通过率= 100.00%</p>
+<p class='attribute'><strong>测试人员 : </strong> 张浩</p>
+<p class='attribute'><strong>开始时间 : </strong> 2020-12-12 23:00:17</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:00:23.687147</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 7，通过 6，错误 1，通过率= 85.71%</p>
 
 <p class='description'>接口自动化项目测试报告</p>
 </div>
 
 
 <p id='show_detail_line'>
-<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 100.00% }</a>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 85.71% }</a>
 <a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
-<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 8 }</a>
-<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 8 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 6 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 7 }</a>
 </p>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
 <colgroup>
@@ -148,31 +148,41 @@ function html_escape(s) {
     <td>详细</td>
 </tr>
 
-<tr class='passClass warning'>
-    <td>test_register.LoginTestCase</td>
-    <td class="text-center">8</td>
-    <td class="text-center">8</td>
+<tr class='errorClass warning'>
+    <td>test_add_project.ProjectTestCase</td>
+    <td class="text-center">7</td>
+    <td class="text-center">6</td>
     <td class="text-center">0</td>
-    <td class="text-center">0</td>
-    <td class="text-center"><a href="javascript:showClassDetail('c1',8)" class="detail" id='c1'>详细</a></td>
+    <td class="text-center">1</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c1',7)" class="detail" id='c1'>详细</a></td>
 </tr>
 
-<tr id='pt1_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_register_001: 正常注册1</div></td>
+<tr id='ft1_1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_add_project_001: 添加项目</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
-    <div id='div_pt1_1' class="collapse">  -->
+    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
+    <div id='div_ft1_1' class="collapse">  -->
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_1'>通过</button>
-    <div id='div_pt1_1' class="collapse in" align="left">
+    <button id='btn_ft1_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft1_1'>错误</button>
+    <div id='div_ft1_1' class="collapse in" align="left">
     <pre>
     
-pt1_1: 
-请求地址--&gt; http://42.192.88.224:8000/user/register/
-请求参数--&gt; {"username":"$username","email":"$email","password":"123456","password_confirm":"123456"}
+ft1_1: 
+登录请求参数--&gt; {'username': 'aaaaaa', 'password': '111111'}
+登录返回结果--&gt; {'token': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzg3MTYxNywiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.JAA6jlx3Zq_0tnJnxdpFCrz-_VVVCbEnObYNCTU9Hfw', 'user_id': 3, 'username': 'aaaaaa'}
+JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzg3MTYxNywiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.JAA6jlx3Zq_0tnJnxdpFCrz-_VVVCbEnObYNCTU9Hfw
+
+请求地址--&gt; http://42.192.88.224:8000/projects/
+请求参数--&gt; {"name":"$name","leader":"412414","tester":"1414124","programmer":"124124","publish_app":"4214","desc":"312321321"}
 期望的测试结果--&gt; None
-服务器响应数据--&gt; {'id': 231, 'username': 'ps60kn', 'token': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMzEsInVzZXJuYW1lIjoicHM2MGtuIiwiZXhwIjoxNjA3NjgzMzE1LCJlbWFpbCI6IjQ0MzgzODY5QDE2My5jb20ifQ.UcxdKe8MiVNprN4eq542sX6qcyrZA0FHnluszS0vfFQ'}
+服务器响应数据--&gt; {'id': 171, 'create_time': '2020-12-12T23:00:18.340153', 'update_time': '2020-12-12T23:00:18.340179', 'is_delete': 0, 'name': '8o0zw0', 'leader': '412414', 'tester': '1414124', 'programmer': '124124', 'publish_app': '4214', 'desc': '312321321'}
+Traceback (most recent call last):
+  File "..\library\ddt.py", line 147, in wrapper
+    return func(self, *args, **kwargs)
+  File "C:\Users\Administrator\PycharmProjects\api_automation-lianxi\test_cases\test_add_project.py", line 88, in test_add_project
+    uid = self.db.find_one(sql=sql)[0]
+AttributeError: 'ProjectTestCase' object has no attribute 'db'
 
 
     </pre>
@@ -181,7 +191,7 @@ pt1_1:
 </tr>
 
 <tr id='pt1_2' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_register_002: 正常注册2</div></td>
+    <td class='passCase'><div class='testcase'>test_add_project_002: 项目名称为空</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
     <button id='btn_pt1_2' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_2'>通过</button>
@@ -192,10 +202,14 @@ pt1_1:
     <pre>
     
 pt1_2: 
-请求地址--&gt; http://42.192.88.224:8000/user/register/
-请求参数--&gt; {"username":"$username","email":"$email","password":"123456","password_confirm":"123456"}
-期望的测试结果--&gt; None
-服务器响应数据--&gt; {'id': 232, 'username': 'EmOPjZ', 'token': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMzIsInVzZXJuYW1lIjoiRW1PUGpaIiwiZXhwIjoxNjA3NjgzMzE3LCJlbWFpbCI6Ijc3ODY0OTQwQDE2My5jb20ifQ.orj1vZLycT64qgqukoOgY_gOP4xsI7ZbYF332xLHrYw'}
+登录请求参数--&gt; {'username': 'aaaaaa', 'password': '111111'}
+登录返回结果--&gt; {'token': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzg3MTYyMCwiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.koCbxufyWKgUM_xNCXQ0QptCobLT5ZcEBWkC95oS0EY', 'user_id': 3, 'username': 'aaaaaa'}
+JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzg3MTYyMCwiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.koCbxufyWKgUM_xNCXQ0QptCobLT5ZcEBWkC95oS0EY
+
+请求地址--&gt; http://42.192.88.224:8000/projects/
+请求参数--&gt; {"name":"","leader":"412414","tester":"1414124","programmer":"124124","publish_app":"4214","desc":"312321322"}
+期望的测试结果--&gt; {'name': ['该字段不能为空。']}
+服务器响应数据--&gt; {'name': ['该字段不能为空。']}
 
 
     </pre>
@@ -204,7 +218,7 @@ pt1_2:
 </tr>
 
 <tr id='pt1_3' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_register_003: 正常注册3</div></td>
+    <td class='passCase'><div class='testcase'>test_add_project_003: 项目名称重复</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
     <button id='btn_pt1_3' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_3'>通过</button>
@@ -215,10 +229,14 @@ pt1_2:
     <pre>
     
 pt1_3: 
-请求地址--&gt; http://42.192.88.224:8000/user/register/
-请求参数--&gt; {"username":"$username","email":"$email","password":"123456","password_confirm":"123456"}
-期望的测试结果--&gt; None
-服务器响应数据--&gt; {'id': 233, 'username': 'I7Ysg4', 'token': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMzMsInVzZXJuYW1lIjoiSTdZc2c0IiwiZXhwIjoxNjA3NjgzMzIwLCJlbWFpbCI6Ijc3OTY4NjExQDE2My5jb20ifQ.8KUhkkhoyJAAKXFOHfnhidDDpo0ezrOhgV-1chzvg5s'}
+登录请求参数--&gt; {'username': 'aaaaaa', 'password': '111111'}
+登录返回结果--&gt; {'token': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzg3MTYyMywiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.WoVOxyaHaAhLDO4RqT_EdkzWTytntfH-1c1qh3EhTdc', 'user_id': 3, 'username': 'aaaaaa'}
+JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzg3MTYyMywiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.WoVOxyaHaAhLDO4RqT_EdkzWTytntfH-1c1qh3EhTdc
+
+请求地址--&gt; http://42.192.88.224:8000/projects/
+请求参数--&gt; {"name":"1aa","leader":"412414","tester":"1414124","programmer":"124124","publish_app":"4214","desc":"312321323"}
+期望的测试结果--&gt; {'name': ['具有 项目名称 的 项目信息 已存在。']}
+服务器响应数据--&gt; {'name': ['具有 项目名称 的 项目信息 已存在。']}
 
 
     </pre>
@@ -227,7 +245,7 @@ pt1_3:
 </tr>
 
 <tr id='pt1_4' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_register_004: 用户名重复</div></td>
+    <td class='passCase'><div class='testcase'>test_add_project_004: 项目组长为空</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
     <button id='btn_pt1_4' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_4'>通过</button>
@@ -238,10 +256,14 @@ pt1_3:
     <pre>
     
 pt1_4: 
-请求地址--&gt; http://42.192.88.224:8000/user/register/
-请求参数--&gt; {"username":"aaaaaa","email":"7693144478@qq.com","password":"123456","password_confirm":"123456"}
-期望的测试结果--&gt; {'username': ['已存在一位使用该名字的用户。']}
-服务器响应数据--&gt; {'username': ['已存在一位使用该名字的用户。']}
+登录请求参数--&gt; {'username': 'aaaaaa', 'password': '111111'}
+登录返回结果--&gt; {'token': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzg3MTYyNywiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.dRdn0tZ2b55eQpfKpHiNYwcrkfniV3uqkbe5-L0s570', 'user_id': 3, 'username': 'aaaaaa'}
+JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzg3MTYyNywiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.dRdn0tZ2b55eQpfKpHiNYwcrkfniV3uqkbe5-L0s570
+
+请求地址--&gt; http://42.192.88.224:8000/projects/
+请求参数--&gt; {"name":"$name","leader":"","tester":"1414124","programmer":"124124","publish_app":"4214","desc":"312321324"}
+期望的测试结果--&gt; {'leader': ['该字段不能为空。']}
+服务器响应数据--&gt; {'leader': ['该字段不能为空。']}
 
 
     </pre>
@@ -250,7 +272,7 @@ pt1_4:
 </tr>
 
 <tr id='pt1_5' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_register_005: 邮箱重复</div></td>
+    <td class='passCase'><div class='testcase'>test_add_project_005: 测试人员为空</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
     <button id='btn_pt1_5' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_5'>通过</button>
@@ -261,10 +283,14 @@ pt1_4:
     <pre>
     
 pt1_5: 
-请求地址--&gt; http://42.192.88.224:8000/user/register/
-请求参数--&gt; {"username":"21r564","email":"769314478@qq.com","password":"123456","password_confirm":"123456"}
-期望的测试结果--&gt; {'email': ['此邮箱已被注册']}
-服务器响应数据--&gt; {'email': ['此邮箱已被注册']}
+登录请求参数--&gt; {'username': 'aaaaaa', 'password': '111111'}
+登录返回结果--&gt; {'token': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzg3MTYzMCwiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.xhfx0bYe8DwUKfXDWGIUo6P_6nDqQRxN5X2Y1AulSXs', 'user_id': 3, 'username': 'aaaaaa'}
+JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzg3MTYzMCwiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.xhfx0bYe8DwUKfXDWGIUo6P_6nDqQRxN5X2Y1AulSXs
+
+请求地址--&gt; http://42.192.88.224:8000/projects/
+请求参数--&gt; {"name":"$name","leader":"1234","tester":"","programmer":"124124","publish_app":"4214","desc":"312321325"}
+期望的测试结果--&gt; {'tester': ['该字段不能为空。']}
+服务器响应数据--&gt; {'tester': ['该字段不能为空。']}
 
 
     </pre>
@@ -273,7 +299,7 @@ pt1_5:
 </tr>
 
 <tr id='pt1_6' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_register_006: 用户名长度不够</div></td>
+    <td class='passCase'><div class='testcase'>test_add_project_006: 开发人员为空</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
     <button id='btn_pt1_6' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_6'>通过</button>
@@ -284,10 +310,14 @@ pt1_5:
     <pre>
     
 pt1_6: 
-请求地址--&gt; http://42.192.88.224:8000/user/register/
-请求参数--&gt; {"username":"1r564","email":"76932314478@qq.com","password":"123456","password_confirm":"123456"}
-期望的测试结果--&gt; {'username': ['仅允许输入6-18个字符']}
-服务器响应数据--&gt; {'username': ['仅允许输入6-18个字符']}
+登录请求参数--&gt; {'username': 'aaaaaa', 'password': '111111'}
+登录返回结果--&gt; {'token': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzg3MTYzNCwiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.H0ioZPg36ueQdW4GfdSwbKuRjTmczrSbNjoFJgHhbHs', 'user_id': 3, 'username': 'aaaaaa'}
+JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzg3MTYzNCwiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.H0ioZPg36ueQdW4GfdSwbKuRjTmczrSbNjoFJgHhbHs
+
+请求地址--&gt; http://42.192.88.224:8000/projects/
+请求参数--&gt; {"name":"$name","leader":"1124","tester":"3123","programmer":"","publish_app":"4214","desc":"312321326"}
+期望的测试结果--&gt; {'programmer': ['该字段不能为空。']}
+服务器响应数据--&gt; {'programmer': ['该字段不能为空。']}
 
 
     </pre>
@@ -296,7 +326,7 @@ pt1_6:
 </tr>
 
 <tr id='pt1_7' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_register_007: 用户名长度超过18</div></td>
+    <td class='passCase'><div class='testcase'>test_add_project_007: 应用名称</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
     <button id='btn_pt1_7' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_7'>通过</button>
@@ -307,33 +337,14 @@ pt1_6:
     <pre>
     
 pt1_7: 
-请求地址--&gt; http://42.192.88.224:8000/user/register/
-请求参数--&gt; {"username":"1r11111111111111564","email":"76932314478@qq.com","password":"123456","password_confirm":"123456"}
-期望的测试结果--&gt; {'username': ['仅允许输入6-18个字符']}
-服务器响应数据--&gt; {'username': ['仅允许输入6-18个字符']}
+登录请求参数--&gt; {'username': 'aaaaaa', 'password': '111111'}
+登录返回结果--&gt; {'token': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzg3MTYzNywiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.6Z72j4ThqIWTEZfQwjTShDIo8-1yZ27U1cF4PzC2sjY', 'user_id': 3, 'username': 'aaaaaa'}
+JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzg3MTYzNywiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.6Z72j4ThqIWTEZfQwjTShDIo8-1yZ27U1cF4PzC2sjY
 
-
-    </pre>
-    </div>
-    </td>
-</tr>
-
-<tr id='pt1_8' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_register_008: 邮箱格式不对</div></td>
-    <td colspan='5' align='center'>
-    <!--默认收起错误信息 -Findyou
-    <button id='btn_pt1_8' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt1_8'>通过</button>
-    <div id='div_pt1_8' class="collapse">  -->
-    <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt1_8' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt1_8'>通过</button>
-    <div id='div_pt1_8' class="collapse in" align="left">
-    <pre>
-    
-pt1_8: 
-请求地址--&gt; http://42.192.88.224:8000/user/register/
-请求参数--&gt; {"username":"1r111111111564","email":"76932314478qq.com","password":"123456","password_confirm":"123456"}
-期望的测试结果--&gt; {'email': ['请输入合法的邮件地址。']}
-服务器响应数据--&gt; {'email': ['请输入合法的邮件地址。']}
+请求地址--&gt; http://42.192.88.224:8000/projects/
+请求参数--&gt; {"name":"$name","leader":"412414","tester":"1414124","programmer":"124124","publish_app":"","desc":"312321321"}
+期望的测试结果--&gt; {'publish_app': ['该字段不能为空。']}
+服务器响应数据--&gt; {'publish_app': ['该字段不能为空。']}
 
 
     </pre>
@@ -343,11 +354,11 @@ pt1_8:
 
 <tr id='total_row' class="text-center active">
     <td>总计</td>
-    <td>8</td>
-    <td>8</td>
+    <td>7</td>
+    <td>6</td>
     <td>0</td>
-    <td>0</td>
-    <td>通过率：100.00%</td>
+    <td>1</td>
+    <td>通过率：85.71%</td>
 </tr>
 </table>
 

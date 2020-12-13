@@ -1,0 +1,4 @@
+2020-12-12 12:01:14,310 - [test_add_project.py -->line:43] - INFO : ================================== 开始执行增加项目接口测试 ==================================
+2020-12-12 12:01:14,311 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'aaaaaa', 'password': '111111'}, 参数类型: form-data, 请求头: None
+2020-12-12 12:01:15,576 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/project/, 请求参数: {'name': '$name', 'leader': '412414', 'tester': '1414124', 'programmer': '124124', 'publish_app': '4214', 'desc': '312321321'}, 参数类型: form-data, 请求头: {'Authorization': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzgzMjA3NCwiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.ps6qnVYBaR0N7GktqNyyaVT49Hy7NSQLYWre6SRFudU'}
+2020-12-12 12:01:17,653 - [test_add_project.py -->line:48] - INFO : ================================== 开始执行增加项目接口测试 ==================================

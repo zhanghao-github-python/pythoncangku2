@@ -57,11 +57,11 @@ def get_token(request_data):
 
 
 if __name__ == '__main__':
-    res = get_random_name()
-    print(res)
-
-    mail = get_random_email()
-    print(mail)
-
-    s = get_token()
-    print(s)
+    pass
+    # print(res)
+    #
+#     email = get_random_email()
+# print(email)
+# name = get_random_name()
+# print(name)
+print(get_token({'username': 'aaaaaa', 'password': '111111'}))

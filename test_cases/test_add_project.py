@@ -3,7 +3,7 @@
 ================================================================================
 
 Author : Administrator
-Created  on : 2020/12/10
+Created  on : 2020/12/12
 
 E-mail: zh13997821732@163.com
 
@@ -25,8 +25,7 @@ from common.logger import output_log
 from common.http_request import HTTPRequest
 from library.ddt import ddt, data
 from main import run
-from common.tools import get_token
-
+from common.tools import get_token, get_random_name
 
 # 从配置文件中获取用例excel名称
 file_name = conf.get('excel', 'file_name')
@@ -34,9 +33,8 @@ file_name = conf.get('excel', 'file_name')
 
 @ddt
 class ProjectTestCase(unittest.TestCase):
-
     # 拼接完整的excel路径 读取数据
-    wb = ReadExcel(os.path.join(DATA_DIR, file_name), 'addproject')
+    wb = ReadExcel(os.path.join(DATA_DIR, file_name), 'project')
     cases = wb.read_line_data()
 
     @classmethod
@@ -57,12 +55,19 @@ class ProjectTestCase(unittest.TestCase):
 
         # 定义向excel回写数据时的row
         self.row = case.case_id + 1
+        request_data = eval(case.request_data)
+        if request_data.get('name') == '$name':
+            name = get_random_name()
+            request_data['name'] = name
+        else:
+            name = request_data['name']
 
         token = get_token(eval(case.token_data))
+        print(token)
         headers = {'Authorization': token}
 
         # 发起请求
-        response = self.http.request(url=url, method=case.method, data=eval(case.request_data), headers=headers)
+        response = self.http.request(url=url, method=case.method, data=request_data, headers=headers)
         time.sleep(2)
 
         # 以下打印内容会显示在html测试报告中
@@ -72,14 +77,21 @@ class ProjectTestCase(unittest.TestCase):
         print('期望的测试结果--> {}'.format(case.expected_data))
         print('服务器响应数据--> {}'.format(response.json()))
 
-        res = response.json()
+        response_data = response.json()
 
         # 登录成功时 将服务器返回的数据中的token去掉 再来断言
-        if res.get('token'):
-            res.pop('token')
+        if response_data.get('id'):
+            response_data.pop('id')
+            response_data.pop('create_time')
+            response_data.pop('update_time')
+            response_data.pop('is_delete')
+
+            expected_data = request_data
+        else:
+            expected_data = eval(case.expected_data)
 
         try:
-            self.assertEqual(eval(case.expected_data), res)
+            self.assertEqual(expected_data, response_data)
         except AssertionError as e:
             result = 'FAIL'
             output_log.exception(e)
@@ -87,7 +99,7 @@ class ProjectTestCase(unittest.TestCase):
             raise e
         else:
             result = 'PASS'
-            output_log.info('预期结果: {}, 实际结果: {}， 断言结果: {}'.format(case.expected_data, res, result))
+            output_log.info('预期结果: {}, 实际结果: {}， 断言结果: {}'.format(case.expected_data, response_data, result))
         finally:
             # 向excel回写数据
             self.wb.write_data(row=self.row, column=10, value=str(response.json()))
@@ -99,5 +111,5 @@ if __name__ == '__main__':
     if env == 'all':
         run(CASE_DIR)
     elif env == 'one':
-        # 命令行执行该测试脚本所有用例 python test_login.py
-        run('test_login')
+        # 命令行执行该测试脚本所有用例 test_add_project.py
+        run('test_add_project')

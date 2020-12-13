@@ -66,6 +66,15 @@ class HTTPRequest2(object):
                  return requests.post(url=url, json=json, headers=headers, cookies=cookies)
 
 
+
+
+
+
+
+
+
+
+
 if __name__ == '__main__':
 
     # 原始的调用方法

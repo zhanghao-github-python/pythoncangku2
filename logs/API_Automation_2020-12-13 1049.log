@@ -1,0 +1,55 @@
+2020-12-13 10:49:07,553 - [test_add_project.py -->line:42] - INFO : ================================== 开始执行增加项目接口测试 ==================================
+2020-12-13 10:49:07,553 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'aaaaaa', 'password': '111111'}, 参数类型: form-data, 请求头: None
+2020-12-13 10:49:08,819 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/projects/, 请求参数: {'name': 's8etFR', 'leader': '412414', 'tester': '1414124', 'programmer': '124124', 'publish_app': '4214', 'desc': '312321321'}, 参数类型: form-data, 请求头: {'Authorization': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzkxNDE0NywiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.oZLTIGLzMkBorB2HttL1KZHHemIzQqBDf8EuSYR8ie8'}
+2020-12-13 10:49:10,913 - [test_add_project.py -->line:96] - ERROR : {'name': 's8etFR', 'leader': '412414', 'tes[79 chars]321'} != {'id': 177, 'name': 's8etFR', 'leader': '41[90 chars]321'}
+  {'desc': '312321321',
++  'id': 177,
+   'leader': '412414',
+   'name': 's8etFR',
+   'programmer': '124124',
+   'publish_app': '4214',
+   'tester': '1414124'}
+Traceback (most recent call last):
+  File "C:\Users\Administrator\PycharmProjects\api_automation-lianxi\test_cases\test_add_project.py", line 93, in test_add_project
+    self.assertEqual(expected_data, response_data)
+  File "C:\Py39\lib\unittest\case.py", line 831, in assertEqual
+    assertion_func(first, second, msg=msg)
+  File "C:\Py39\lib\unittest\case.py", line 1130, in assertDictEqual
+    self.fail(self._formatMessage(msg, standardMsg))
+  File "C:\Py39\lib\unittest\case.py", line 670, in fail
+    raise self.failureException(msg)
+AssertionError: {'name': 's8etFR', 'leader': '412414', 'tes[79 chars]321'} != {'id': 177, 'name': 's8etFR', 'leader': '41[90 chars]321'}
+  {'desc': '312321321',
++  'id': 177,
+   'leader': '412414',
+   'name': 's8etFR',
+   'programmer': '124124',
+   'publish_app': '4214',
+   'tester': '1414124'}
+2020-12-13 10:49:10,983 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'aaaaaa', 'password': '111111'}, 参数类型: form-data, 请求头: None
+2020-12-13 10:49:12,246 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/projects/, 请求参数: {'name': '', 'leader': '412414', 'tester': '1414124', 'programmer': '124124', 'publish_app': '4214', 'desc': '312321322'}, 参数类型: form-data, 请求头: {'Authorization': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzkxNDE1MCwiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.lbPowF8c1dhn9W8m3RKxFunyVRHjtqVs8vfgzT-EkEg'}
+2020-12-13 10:49:14,369 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'aaaaaa', 'password': '111111'}, 参数类型: form-data, 请求头: None
+2020-12-13 10:49:15,634 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/projects/, 请求参数: {'name': '1aa', 'leader': '412414', 'tester': '1414124', 'programmer': '124124', 'publish_app': '4214', 'desc': '312321323'}, 参数类型: form-data, 请求头: {'Authorization': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzkxNDE1MywiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.d7FIcS53d0Jgq5eXqtZ0wVJJ32oDSjM303DiscPKSUA'}
+2020-12-13 10:49:17,751 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'aaaaaa', 'password': '111111'}, 参数类型: form-data, 请求头: None
+2020-12-13 10:49:19,015 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/projects/, 请求参数: {'name': '679I81', 'leader': '', 'tester': '1414124', 'programmer': '124124', 'publish_app': '4214', 'desc': '312321324'}, 参数类型: form-data, 请求头: {'Authorization': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzkxNDE1NywiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.Pf7Er4i3GzD3fqv-XAhs6Ya0rZhI0dXmSivnrhztlec'}
+2020-12-13 10:49:21,135 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'aaaaaa', 'password': '111111'}, 参数类型: form-data, 请求头: None
+2020-12-13 10:49:22,400 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/projects/, 请求参数: {'name': '1jfk6t', 'leader': '1234', 'tester': '', 'programmer': '124124', 'publish_app': '4214', 'desc': '312321325'}, 参数类型: form-data, 请求头: {'Authorization': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzkxNDE2MCwiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.jrt4jSo9zqelnZ3sEjEpSoJvv2GDNWYZv3WbOQyHwEk'}
+2020-12-13 10:49:24,520 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'aaaaaa', 'password': '111111'}, 参数类型: form-data, 请求头: None
+2020-12-13 10:49:25,783 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/projects/, 请求参数: {'name': 'YFZ56f', 'leader': '1124', 'tester': '3123', 'programmer': '', 'publish_app': '4214', 'desc': '312321326'}, 参数类型: form-data, 请求头: {'Authorization': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzkxNDE2MywiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.mAln2fXjlfaD6qnfeyN8hNh7KoyplmQSK5AM9sQGNkA'}
+2020-12-13 10:49:27,902 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'aaaaaa', 'password': '111111'}, 参数类型: form-data, 请求头: None
+2020-12-13 10:49:29,166 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/projects/, 请求参数: {'name': 'ps4knY', 'leader': '412414', 'tester': '1414124', 'programmer': '124124', 'publish_app': '', 'desc': '312321321'}, 参数类型: form-data, 请求头: {'Authorization': 'JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6ImFhYWFhYSIsImV4cCI6MTYwNzkxNDE2NywiZW1haWwiOiI0MzYzNDU2QHFxLmNvbSJ9.yYeKFnVcG4oOhqLmryF8_4cUSBnIYciIorc_EbWoK1s'}
+2020-12-13 10:49:31,284 - [test_add_project.py -->line:47] - INFO : ================================== 开始执行增加项目接口测试 ==================================
+2020-12-13 10:49:31,285 - [test_login.py -->line:43] - INFO : ================================== 开始执行登录接口测试 ==================================
+2020-12-13 10:49:31,285 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'aaaaaa', 'password': '111111'}, 参数类型: form-data, 请求头: None
+2020-12-13 10:49:33,556 - [test_login.py -->line:86] - INFO : 预期结果: {'user_id': 3, 'username': 'aaaaaa'}, 实际结果: {'user_id': 3, 'username': 'aaaaaa'}， 断言结果: PASS
+2020-12-13 10:49:33,626 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'zhzhzh', 'password': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-13 10:49:35,854 - [test_login.py -->line:86] - INFO : 预期结果: {'user_id': 83, 'username': 'zhzhzh'}, 实际结果: {'user_id': 83, 'username': 'zhzhzh'}， 断言结果: PASS
+2020-12-13 10:49:35,924 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'zhzhzh1', 'password': '123456'}, 参数类型: form-data, 请求头: None
+2020-12-13 10:49:38,152 - [test_login.py -->line:86] - INFO : 预期结果: {'user_id': 84, 'username': 'zhzhzh1'}, 实际结果: {'user_id': 84, 'username': 'zhzhzh1'}， 断言结果: PASS
+2020-12-13 10:49:38,221 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'zhzhzh1', 'password': '123457'}, 参数类型: form-data, 请求头: None
+2020-12-13 10:49:40,443 - [test_login.py -->line:86] - INFO : 预期结果: {'non_field_errors': ['无法使用提供的认证信息登录。']}, 实际结果: {'non_field_errors': ['无法使用提供的认证信息登录。']}， 断言结果: PASS
+2020-12-13 10:49:40,523 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': '', 'password': '123458'}, 参数类型: form-data, 请求头: None
+2020-12-13 10:49:42,563 - [test_login.py -->line:86] - INFO : 预期结果: {'username': ['该字段不能为空。']}, 实际结果: {'username': ['该字段不能为空。']}， 断言结果: PASS
+2020-12-13 10:49:42,634 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'zhzhzh1', 'password': ''}, 参数类型: form-data, 请求头: None
+2020-12-13 10:49:44,672 - [test_login.py -->line:86] - INFO : 预期结果: {'password': ['该字段不能为空。']}, 实际结果: {'password': ['该字段不能为空。']}， 断言结果: PASS
+2020-12-13 10:49:44,740 - [http_request.py -->line:37] - INFO : 正在发送请求, 请求地址: http://42.192.88.224:8000/user/login/, 请求参数: {'username': 'zhz23h1', 'password': '12346'}, 参数类型: form-data, 请求头: None

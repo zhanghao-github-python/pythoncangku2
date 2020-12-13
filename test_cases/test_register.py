@@ -95,6 +95,8 @@ class LoginTestCase(unittest.TestCase):
             sql = "SELECT id FROM auth_user WHERE username='{}';".format(username)
             uid = self.db.find_one(sql=sql)[0]
 
+
+
             # 组装期望结果
             expected_data = {'id': uid, 'username': username}
         else:
