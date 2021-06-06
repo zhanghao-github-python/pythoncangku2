@@ -20,16 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="111b161c-6e93-4f1a-9e18-045a9d0f871e" name="Default Changelist" comment="2020121021313">
-      <change afterPath="$PROJECT_DIR$/test_cases/test_add_project.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/http_request.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/http_request.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/tools.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/tools.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/config_prod.ini" beforeDir="false" afterPath="$PROJECT_DIR$/conf/config_prod.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/config_test.ini" beforeDir="false" afterPath="$PROJECT_DIR$/conf/config_test.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/api_automation_course.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/data/api_automation_course.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reports/20201210184153_report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/test_addproject.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/test_register.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases/test_register.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_cases/test_add_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases/test_add_project.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +49,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/U盘资料/20200003/python基础" />
+    <property name="settings.editor.selected.configurable" value="com.gitee.ui.GiteeSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -249,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607611008766</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="2020121021313">
+      <created>1607831437780</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1607831437780</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -274,57 +274,13 @@
     <option name="LAST_COMMIT_MESSAGE" value="2020121021313" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1607686216948">
+    <state x="461" y="164" key="SettingsEditor" timestamp="1622978056936">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1607686216948" />
-    <state x="775" y="420" key="Gitee.ShareDialog" timestamp="1606748026017">
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1622978056936" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1622974092512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="775" y="420" key="Gitee.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606748026017" />
-    <state x="696" y="223" key="Gitee.UntrackedFilesDialog" timestamp="1606748029823">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="696" y="223" key="Gitee.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606748029823" />
-    <state width="1899" height="341" key="GridCell.Tab.0.bottom" timestamp="1607830325154">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="341" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607830325154" />
-    <state width="1899" height="341" key="GridCell.Tab.0.center" timestamp="1607830325154">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="341" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607830325154" />
-    <state width="1899" height="341" key="GridCell.Tab.0.left" timestamp="1607830325154">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="341" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607830325154" />
-    <state width="1899" height="341" key="GridCell.Tab.0.right" timestamp="1607830325154">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="341" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607830325154" />
-    <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1607219047413">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607219047413" />
-    <state width="1899" height="348" key="GridCell.Tab.1.center" timestamp="1607219047413">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607219047413" />
-    <state width="1899" height="348" key="GridCell.Tab.1.left" timestamp="1607219047413">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607219047413" />
-    <state width="1899" height="348" key="GridCell.Tab.1.right" timestamp="1607219047413">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607219047413" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607611018575">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607611018575" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607089227912">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607089227912" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1622974092512" />
   </component>
 </project>

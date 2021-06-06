@@ -79,7 +79,7 @@ class ProjectTestCase(unittest.TestCase):
 
         response_data = response.json()
 
-        # 登录成功时 将服务器返回的数据中的token去掉 再来断言
+        # 增加项目成功时 将服务器返回的数据中的id,create_time,update_time,is_delete 去掉 再来断言
         if response_data.get('id'):
             response_data.pop('id')
             response_data.pop('create_time')
@@ -113,3 +113,4 @@ if __name__ == '__main__':
     elif env == 'one':
         # 命令行执行该测试脚本所有用例 test_add_project.py
         run('test_add_project')
+    #111111
