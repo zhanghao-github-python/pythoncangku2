@@ -20,6 +20,7 @@ from email.mime.multipart import MIMEMultipart
 import win32com.client as win32
 
 
+
 class SendEmail(object):
 
     @staticmethod
