@@ -9,23 +9,12 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="111b161c-6e93-4f1a-9e18-045a9d0f871e" name="Default Changelist" comment="2020121021313">
+    <list default="true" id="111b161c-6e93-4f1a-9e18-045a9d0f871e" name="Default Changelist" comment="321341">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/send_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/send_email.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_cases/test_add_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_cases/test_add_project.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +29,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1l0xUT7Tc3itHPqjZpayvjVT74X" />
@@ -53,7 +48,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/U盘资料/20200003/python基础" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -275,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622978171802</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="321341">
+      <created>1624971981145</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1624971981145</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -297,13 +299,18 @@
     <MESSAGE value="2020120" />
     <MESSAGE value="20201206" />
     <MESSAGE value="2020121021313" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020121021313" />
+    <MESSAGE value="321341" />
+    <option name="LAST_COMMIT_MESSAGE" value="321341" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1624289662922">
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1624977846210">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1624289662922" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1624977846210" />
+    <state x="771" y="439" key="Github.CreateGistDialog" timestamp="1624977160061">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="771" y="439" key="Github.CreateGistDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1624977160061" />
     <state width="1899" height="341" key="GridCell.Tab.0.bottom" timestamp="1624811012813">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -320,13 +327,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="341" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1624811012813" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1624876680185">
+    <state x="540" y="254" key="IDE.errors.dialog" timestamp="1624977833006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1624876680185" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1622978789496">
+    <state x="540" y="254" key="IDE.errors.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1624977833006" />
+    <state x="461" y="164" key="SettingsEditor" timestamp="1624971904128">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1622978789496" />
+    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1624971904128" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1624971987549">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1624971987549" />
+    <state x="689" y="419" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1624978094653">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="689" y="419" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1624978094653" />
   </component>
 </project>
